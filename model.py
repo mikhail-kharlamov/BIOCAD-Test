@@ -37,7 +37,7 @@ df['ddG_sign'] = (df['ddG'] > 0).astype(int)
 def parse_mutation(mutation):
     try:
         wild = mutation[:3]
-        pos = ''.join(filter(lambda x: x.isdigit(), mutation))
+        pos = mutation[3:-3]
         mut_res = mutation[-3:]
         return wild, pos, mut_res
     except:
